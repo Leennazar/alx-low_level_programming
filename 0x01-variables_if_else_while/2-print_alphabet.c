@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	char *str = "abcdefghijklmnop\n";
+	char *str = "abcdefghijklmnopqrstuvwxyz\n";
 	int i;
 
 	for (i = 0; str[i] != '\0'; i++)
