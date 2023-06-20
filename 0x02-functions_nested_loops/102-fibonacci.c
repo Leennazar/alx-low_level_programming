@@ -4,7 +4,7 @@
   *  starting with 1 and 2, followed by a new line.
   *  Return: nothing
   */
-int main (void)
+int main(void)
 {
 	int i = 0;
 	long j = 1, k = 2;
