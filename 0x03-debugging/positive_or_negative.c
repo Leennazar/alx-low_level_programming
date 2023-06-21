@@ -5,9 +5,8 @@
   * main - program that prints if a random number is positive,negative,or zero
   * Return: 0 (Success)
   */
-void postitive_or_negative(int)
+void postitive_or_negative(int n)
 {
-	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -23,5 +22,4 @@ void postitive_or_negative(int)
 	{
 		printf("%d is negative\n", n);
 	}
-	return (0);
 }
