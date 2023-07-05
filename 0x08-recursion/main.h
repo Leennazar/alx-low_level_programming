@@ -19,4 +19,10 @@ int _putchar(char c);
 
 int other_sqrt_recursion(int n, int j);
 
+int is_prime_number(int n);
+
+int actual_prime(int n, int i);
+
+int check_pal(char *s, int i, int len);
+
 #endif
