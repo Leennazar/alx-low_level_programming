@@ -7,18 +7,31 @@
 
 int _sqrt_recursion(int n)
 {
-	int i;
+	if (n < 0)
+		return (-1);
+	else
+		return (other_sqrt_recursion(n, 0));
+}
+/**
+  * other_sqrt_recursion - find the natural square rootr
+  *
+  * @n: number to calculate square root
+  * @j: iterator
+  * Return: resulting square root
+  */
 
-	if (n <= 0)
+int other_sqrt_recursion(int n, int j)
+{
+	if (j * j > n)
 	{
 		return (-1);
 	}
-	for (i = 0; i * i <= n; i++)
+	if (j * j == n)
 	{
-		if (i * i == n)
-		{
-			return (i);
-		}
+		return (j);
 	}
-	return (-1);
+	else
+	{
+		return (other_sqrt_recursion(n, j + 1));
+	}
 }

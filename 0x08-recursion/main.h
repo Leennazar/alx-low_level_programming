@@ -17,4 +17,6 @@ int is_prime_number(int n);
 
 int _putchar(char c);
 
+int other_sqrt_recursion(int n, int j);
+
 #endif
