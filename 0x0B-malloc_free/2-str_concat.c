@@ -13,8 +13,12 @@ char *str_concat(char *s1, char *s2)
 	char *nspace;
 
 	nspace = malloc(sizeof(char) * (strlen(s1) + strlen(s2)) + 1);
-	if (nspace == NULL)
+	if (s2 == NULL)
 		return (s1);
+	else if (s1 == NULL)
+		return (s2);
+	else if ((s1 == NULL) && (s2 == NULL))
+		return (nspace);
 	strcpy(nspace, s1);
 	strcat(nspace, s2);
 	if (nspace == NULL)
