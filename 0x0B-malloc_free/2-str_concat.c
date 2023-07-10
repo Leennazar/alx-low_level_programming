@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 /**
-  * str_concat - function that concatenates two strings.
-  * @s1: first string
-  * @s2: Second string
-  * Return: new space that contains s1 and s2
-  */
+ * str_concat - function that concatenates two strings.
+ * @s1: first string
+ * @s2: Second string
+ * Return: new space that contains s1 and s2
+ */
 
 char *str_concat(char *s1, char *s2)
 {
@@ -14,9 +14,21 @@ char *str_concat(char *s1, char *s2)
 
 	nspace = malloc(sizeof(char) * (strlen(s1) + strlen(s2)) + 1);
 	if (nspace == NULL)
-		return (s1);
-	strcpy(nspace, s1);
-	strcat(nspace, s2);
+		return (NULL);
+
+	if (s1 != NULL && s2 != NULL)
+	{
+		strcpy(nspace, s1);
+		strcat(nspace, s2);
+	}
+	else if (s1 != NULL)
+		strcpy(nspace, s1);
+	else if (s2 != NULL)
+		strcpy(nspace, s2);
+	else
+		return (NULL);
+
+
 	return (nspace);
 	free(nspace);
 
