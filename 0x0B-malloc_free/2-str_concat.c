@@ -20,6 +20,7 @@ char *str_concat(char *s1, char *s2)
 	if (nspace == NULL)
 		return (NULL);
 	return (nspace);
+	free (nspace);
 
 
 }
