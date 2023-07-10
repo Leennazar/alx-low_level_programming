@@ -11,34 +11,29 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *nspace;
+	char *new_str;
 	size_t len1, len2;
+
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 
 	len1 = strlen(s1);
 	len2 = strlen(s2);
-	nspace = malloc(sizeof(char) * (len1 + len2 + 1));
-	if (nspace == NULL)
-		return (NULL);
-
-	if (s1 != NULL && s2 != NULL)
-	{
-		strcpy(nspace, s1);
-		strcat(nspace, s2);
-	}
-	else if (s1 != NULL)
-	{
-		strcpy(nspace, s1);
-		strcat(nspace, "\0");
-	}
-	else if (s2 != NULL)
-	{
-		strcpy(nspace, s2);
-		strcat(nspace, "\0");
-	}
-	else
+	new_str = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (new_str == NULL)
 	{
 		return (NULL);
 	}
 
-	return (nspace);
+	strcpy(new_str, s1);
+	strcat(new_str, s2);
+
+	return (new_str);
 }
