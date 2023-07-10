@@ -12,8 +12,6 @@ char *str_concat(char *s1, char *s2)
 {
 	char *nspace;
 
-	if (s1 == NULL || s2 == NULL)
-		return;
 	nspace = malloc(sizeof(char) * (strlen(s1) + strlen(s2)) + 1);
 	if (nspace == NULL)
 		return (s1);
@@ -21,6 +19,8 @@ char *str_concat(char *s1, char *s2)
 	strcat(nspace, s2);
 	if (nspace == NULL)
 		return (NULL);
+	if (s1 == NULL || s2 == NULL)
+		return;
 	return (nspace);
 	free(nspace);
 
