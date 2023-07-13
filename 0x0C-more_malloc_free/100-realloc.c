@@ -22,7 +22,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		new_ptr = NULL;
 	}
-	if (new_size <= old_size)
+	else if (new_size <= old_size)
 	{
 		new_ptr = ptr;
 	}
