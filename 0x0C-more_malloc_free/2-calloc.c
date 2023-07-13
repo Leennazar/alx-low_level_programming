@@ -21,4 +21,5 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	b = sizeof(arr);
 	memset(arr, '0', b);
 	return (arr);
+	free(arr);
 }
