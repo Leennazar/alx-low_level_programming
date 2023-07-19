@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "function_pointers.h"
 /**
  * main - program that prints opcodes for its own main function
  * @argc: argument count
@@ -24,13 +25,11 @@ static int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	arr = (char *)main;
+	char *main_start = (char *)main;
 
-	x = 0;
-	while (x < bytes)
+	for (int i = 0; i < number_of_bytes; i++)
 	{
-		printf("%02hhx", arr[x]);
-		x++;
+		printf("%02hhx", main_start[i]);
 	}
 	printf("\n");
 	return (0);
