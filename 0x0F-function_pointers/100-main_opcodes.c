@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "3-calc.h"
 /**
  * main - prints its own opcode
  * @argc: argument count
@@ -9,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int bytes, x, i;
+	int bytes, x;
 	char *arr;
 
 	if (argc != 2)
