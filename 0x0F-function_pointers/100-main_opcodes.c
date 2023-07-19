@@ -27,11 +27,11 @@ int main(int argc, char *argv[])
 	arr = (char *)main;
 
 	x = 0;
-	while (x < bytes - 1)
+	while (x < bytes)
 	{
 		printf("%02hhx", arr[x]);
 		x++;
 	}
-	printf("%02hhx\n", arr[x]);
+	printf("\n");
 	return (0);
 }
