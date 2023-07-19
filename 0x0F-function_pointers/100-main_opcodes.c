@@ -6,6 +6,7 @@
  * @argv: argument vector
  * Return: always 0 (Success)
  */
+
 int main(int argc, char *argv[])
 {
 	int x, bytes;
@@ -31,6 +32,6 @@ int main(int argc, char *argv[])
 		printf("%02hhx", arr[x]);
 		x++;
 	}
-	printf("%02hhx\n", array[x]);
+	printf("%02hhx\n", arr[x]);
 	return (0);
 }
