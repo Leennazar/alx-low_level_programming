@@ -9,7 +9,7 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i = 0;
-	char *separator = "";
+	char *s, *separator = "";
 
 	va_start(args, format);
 	while (format[i] != '\0')
@@ -26,13 +26,14 @@ void print_all(const char * const format, ...)
 				printf("%s%f", separator, va_arg(args, double));
 				break;
 			case 's':
-				if (va_arg(args, char *) == NULL)
+				s = va_arg(args, char *);
+				if (s == NULL)
 				{
 					printf("(nil)");
 				}
 				else
 				{
-					printf("%s%s", separator, va_arg(args, char *));
+					printf("%s%s", separator, s);
 				}
 				break;
 			default:
